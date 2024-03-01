@@ -1,0 +1,1 @@
+{"version":3,"sources":["scittle/impl/common.cljs"],"mappings":";AAGA,AAAKA,4BAAM,iDAAA,AAAA,yEAAA,1HAACC","names":["scittle.impl.common/cljns","sci.core.create_ns"],"sourcesContent":["(ns scittle.impl.common\n  (:require [sci.core :as sci]))\n\n(def cljns (sci/create-ns 'clojure.core nil))\n"]}

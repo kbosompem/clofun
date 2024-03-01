@@ -1,0 +1,1 @@
+{"version":3,"sources":["scittle/re_frame.cljs"],"mappings":";AAKA,mCAAA,nCAACA,+HAEAC","names":["scittle.core/register-plugin!","sci.configs.re-frame.re-frame/config"],"sourcesContent":["(ns scittle.re-frame\n  (:require\n   [sci.configs.re-frame.re-frame :as rf]\n   [scittle.core :as scittle]))\n\n(scittle/register-plugin!\n ::re-frame\n rf/config)\n"]}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <script src="./js/scittle.js" type="application/javascript"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="./js/scittle.reagent.js" type="application/javascript"></script>
+    <script src="./js/scittle.re-frame.js" type="application/javascript"></script>
+    <script src="./js/scittle.promesa.js" type="application/javascript"></script>
+    <script src="./js/scittle.datascript.js" type="application/javascript"></script>
+    <script src="./js/scittle.cljs-ajax.js" type="application/javascript"></script>
+    <script src="./js/scittle.pprint.js" type="application/javascript"></script>
+    <script type="application/x-scittle">
+      (ns kay
+        (:require [datascript.core :as d]
+                  [reagent.core :as r]
+                  [reagent.dom :as rdom]
+                  [re-frame.core :as rf]))
+
+      (let [schema {:aka {:db/cardinality :db.cardinality/many}}
+              conn   (d/create-conn schema)]
+           (d/transact! conn [ { :db/id -1
+                        :name  "Maksim"
+                        :age   45
+                        :aka   ["Max Otto von Stierlitz", "Jack Ryan"] } ])
+  (println (d/q '[ :find  ?n ?a
+          :where [?e :aka "Max Otto von Stierlitz"]
+                 [?e :name ?n]
+                 [?e :age  ?a] ]
+       @conn)))
+
+      (js/console.log "meow")
+      (println "boof")
+    </script>
+</head>
+
+<body>
+    <h1>Hello Datascript!</h1>
+</body>
+
+</html>

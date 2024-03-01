@@ -1,0 +1,1 @@
+{"version":3,"sources":["scittle/promesa.cljs"],"mappings":";AAKA,mCAAA,nCAACA,2HAECC","names":["scittle.core/register-plugin!","sci.configs.funcool.promesa/config"],"sourcesContent":["(ns scittle.promesa\n  (:require\n   [sci.configs.funcool.promesa :as p]\n   [scittle.core :as scittle]))\n\n(scittle/register-plugin!\n  ::promesa\n  p/config)\n"]}
