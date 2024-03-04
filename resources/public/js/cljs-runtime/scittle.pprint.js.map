@@ -1,1 +1,0 @@
-{"version":3,"sources":["scittle/pprint.cljs"],"mappings":";AAKA,mCAAA,nCAACA,wHAECC","names":["scittle.core/register-plugin!","sci.configs.cljs.pprint/config"],"sourcesContent":["(ns scittle.pprint\n  (:require\n   [sci.configs.cljs.pprint :refer [config]]\n   [scittle.core :as scittle]))\n\n(scittle/register-plugin!\n  ::pprint\n  config)\n"]}
